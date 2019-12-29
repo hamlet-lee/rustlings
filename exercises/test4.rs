@@ -5,8 +5,12 @@
 
 // Write a macro that passes the test! No hints this time, you can do it!
 
-// I AM NOT DONE
-
+macro_rules! my_macro {
+  ($x:expr) => {{
+    let s = "Hello ".to_string() + $x;
+    s
+  }}
+}
 fn main() {
     if my_macro!("world!") != "Hello world!" {
         panic!("Oh no! Wrong output!");
